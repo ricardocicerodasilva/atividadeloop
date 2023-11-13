@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+    <h1> NOTAS ALUNOS </h1>
+    <P> CADASTRO:<span id="cd"></span></P>
+    <p>MÉDIA GERAL:<span id="m"></span></p>
+    <p>TOTAL REPROVADOS:<span id="tr"></span></p>
+    <script>
+
+
+        let mat = Number(prompt("DIGITE O NÚMERO DA MATRÍCULA DO ALUNO"));
+        while (mat <= 4) {
+
+            let nt1 = Number(prompt("DIGITE A PRIMEIRA NOTA"));
+            let nt2 = Number(prompt("DIGITE A SEGUNDA  NOTA"));
+            let nt3 = Number(prompt("DIGITE A TERCEIRA NOTA"));
+            let fre = Number(prompt("DIGITE A FREQUENCIA DO ALUNO"));
+            mat = Number(prompt("DIGITE O NÚMERO DA MATRÍCULA DO ALUNO"));
+
+            let media = (nt1 + nt2 + nt3) / 3;
+            let b = 1;
+            let resultado;
+
+
+
+
+
+            if (fre >= 80 && media >= 7) {
+                resultado = "aprovado"
+
+            } else {
+                resultado = "reprovado"
+                document.getElementById("tr").innerHTML += resultado
+                b++;
+
+            }
+
+            document.getElementById("m").innerHTML += media / 4;
+
+            document.getElementById("cd").innerHTML += "<br>" + "MATRÍCULA: " + mat + "<br>" + "1 NOTA: " + nt1 + "<br>" +
+                "2 NOTA: " + nt2 + "<br>" + "3 NOTA:" + nt3 + "<br>" + "FREQUÊNCIA: " + fre + "<br>" + "MÉDIA: " + media + "<br>" + "situação: " + resultado + "<hr>";
+
+
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

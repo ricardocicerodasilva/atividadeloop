@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+    <h1> CADASTRO DE PEÇAS</h1>
+
+    <br>
+    <p>
+    <h3> CADASTRO:</h3>
+    <h4><span id="cd"></h4> </span></p>
+    <p>
+    <h3> REPROVADO:</h3>
+    <h4><span id="ra"></h4> </span></p>
+    <p>
+    <h3> APROVADO:</h3>
+    <h4><span id="rb"></h4> </span></p>
+
+    <script>
+
+        let a = 0
+        let b = 0
+        let i = 1
+        while (i <= 400) {
+            let di = (prompt("digite o numero da peça"));
+            let me = (prompt("Qual o estado da peça aprovado ou reprovado "));
+            i++
+            if (me == "reprovado") {
+                document.getElementById("ra").innerHTML += di + "," 
+                a++
+            } if (me == "aprovado") {
+                document.getElementById("rb").innerHTML += di + ","  
+                b++
+            }
+        }
+        document.getElementById('cd').innerHTML = 'Total de peças aprovadas: '+ b + '<br>' + 'Total de peças reprovadas: '+ a;
+
+
+    </script>
+</body>
+
+</html>

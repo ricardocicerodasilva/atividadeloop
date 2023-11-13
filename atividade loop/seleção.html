@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+    <h1> SELEÇÃO FUNCIONÁRIOS </h1>
+    <P> CADASTRO:<span id="cd"></span></P>
+    <p>classificação:<span id="cl"></span></p>
+  
+    <script>
+
+
+        let mat = Number(prompt("DESEJA  CADASTRAR ALGUM CANDIDATO 1(SIM) 2 (NÃO)"));
+        while (mat == 1) {
+            let cad = Number(prompt("DIGITE A MATRICULA DO CANDIDATO"));
+            let i = Number(prompt("DIGITE A IDADE DO CANDIDATO"));
+            let s = prompt("DIGITE O SEXO DO CANDIDATO");
+            let e = Number(prompt("TEM EXPERIENCIA 1(SIM) 2(NÃO)"));
+            let media = i;
+            let nc = i++;
+            let tc=0;
+            mat = Number(prompt("DESEJA  CADASTRAR ALGUM CANDIDATO 1(SIM) 2 (NÃO)"));
+            if ( i >= 18 == 1 && e==1) {
+                resultado = "Qualificado"
+            } else {
+                resultado = "análise"
+
+            }
+            document.getElementById("cd").innerHTML += "<br>" + "registro: " + cad + " <br> " + "IDADE: " + i + "<br>" + "SEXO: " + s + "<br> " +
+             "EXPERIÊNCIA 1(SIM) 2(NÃO): " + e + "<br> " +"RESULTADO: " + resultado+"<hr>";
+        }
+
+           { document.getElementById("cl").innerHTML += "<br>" + "MÉDIA IDADE: " + media +nc++ + "<br>"
+                + "TOTAL DE CANDIDATOS: " + mat+tc++ + "<br>" ;
+     
+}
+    </script>
+
+</body>
+
+</html>

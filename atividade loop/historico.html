@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <h1>  CADASTRO ESCOLAR</h1>
+    <h2>ESCOLA ESTADUAL JOÃO ABREU</h2>
+        <br>
+        <p><h3> CADASTRO:</h3><h4><span id="cd"></h4> </span></p>
+      
+<script>
+let cd=Number(prompt("deseja cadastrar alguma disciplina \n  1-Sim \n 2-Não")); 
+
+while (cd == 1) {
+    let di=(prompt("digite uma disciplina entre portugues, matematica, socilogia, historia e ingles "));    
+    let me=(prompt("digite a descrição do curso "));   
+    let fr=Number(prompt("digite a frequencia minima para aprovação ")); 
+    let nt=Number(prompt("digite a nota minima para aprovação"));     
+     cd=Number(prompt("deseja cadastrar outra disciplina \n  1-Sim \n 2-Não")); 
+    
+     document.getElementById("cd").innerHTML +="<br> "+"<br> "  + di +"<br>" +me + "<br>"+fr + "<br>" +nt;
+}
+
+
+
+
+
+ </script>   
+</body>
+</html>

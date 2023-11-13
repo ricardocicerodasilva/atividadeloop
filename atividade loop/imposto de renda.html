@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+    <h1> CALCULO IMPOSTO DE RENDA</h1>
+
+
+    <p>
+    <h3> NOME DO CONTRIBUINTE:</h3>
+    <h4><span id="n"></h4> </span></p>
+    <p>
+    <h3>CPF: </h3>
+    <h4><span id="c"> </span></h4>
+    </p>
+    <p>
+    <h3>RENDA ANUAL: </h3>
+    <h4><span id="r"> </span></h4>
+    </p>
+    <p>
+    <h3>DEPENDENTES: </h3>
+    <h4><span id="d"> </span></h4>
+    </p>
+    <p>
+    <h3>VALOR A SER PAGO: </h3>
+    <h4><span id="pg"> </span></h4>
+    </p>
+
+    <script>
+        let nm = (prompt("DIGITE SEU NOME COMPLETO "));
+        let cp = Number(prompt("DIGITE OS 11 NÚMEROS DE SEU CPF"));
+        let ra = Number(prompt("DIGITE O VALOR DE SUA RENDA ANUAL LIQUIDA "));
+        let de = Number(prompt("DIGITE O NÚMERO DE DEPENDENTES"));
+        let resultado = ''
+        let total = 0
+        if (ra <= 900) {
+            resultado = "ISENTO"
+        } else if (ra <= 5000) {
+            total = ra * 0.05 - (de * 110)
+            resultado = "VALOR A SER PAGO: " + total
+        } else if (ra <= 10000) {
+            total = ra * 0.1 - (de * 110)
+            resultado = "VALOR A SER PAGO: " + total
+        } else {
+            total = ra * 0.15 - (de * 110)
+            resultado = "VALOR A SER PAGO: " + total
+        }
+
+        document.getElementById("n").innerHTML = nm;
+        document.getElementById("c").innerHTML = cp;
+        document.getElementById("r").innerHTML = ra;
+        document.getElementById("d").innerHTML = de;
+        document.getElementById("pg").innerHTML = resultado;
+
+
+    </script>
+</body>
+
+</html>
